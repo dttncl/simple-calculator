@@ -28,16 +28,18 @@ function buildNumber() {
 
             // numbers
             if (Number(key.value) >= 0 && Number(key.value) <= 9) {
+                
                 numBuilder += key.value;
                 display.textContent = numBuilder;
 
             // decimal
             } else if (key.value === '.' && dotCount === 0) {
-
-                if (counter === 0) {
-                    numBuilder = Number(numBuilder) + num1;
+               
+                if (op === '=') {
+                    numBuilder = num1.toString();
+                    counter = 0;
                 }
-                
+
                 numBuilder += key.value;
                 display.textContent = numBuilder;
                 dotCount = 1;
@@ -46,20 +48,17 @@ function buildNumber() {
             } else if (OPERATOR.hasOwnProperty(key.value)) {
                 getOperator(key,numBuilder);
                 numBuilder = '';
+                dotCount = 0;
             
             // equal
             } else if (key.value === 'equal' && counter > 0) {
                 getOperator(key,numBuilder);
-
+                dotCount = 0;
                 
             // reset
             } else if (key.value === 'ac') {
-                numBuilder = '';
-                num1 = 0;
-                num2 = 0;
-                op = '';
-                counter = 0;
-                dotCount = 0;
+                numBuilder = op = '';
+                num1 = num2 = counter = dotCount = 0;
                 display.textContent = num1;
             
             // sign
@@ -84,9 +83,8 @@ function getOperator(key,numBuilder) {
         counter = 1;
     } else {
         num1 = solve(num1);
-        op = OPERATOR[key.value];
+        op = (OPERATOR.hasOwnProperty(key.value)) ? OPERATOR[key.value] : '=';
         num2 = 0;
-        counter = 0;
     }
 }
 
@@ -109,6 +107,7 @@ function solve(num1) {
             break;
     }
 
+    res = Math.round(res * 100) / 100;
     display.textContent = res;
     return res;
 }
