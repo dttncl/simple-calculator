@@ -13,28 +13,33 @@
     <main>
         <div class="calculator">
             <div class="screen box">
-                <p id="display"></p>
+                <p id="display">0</p>
             </div>
             <div class="keys">
-                <button type="reset" id="reset">AC</button>
-                <button id="sign">+/-</button>
-                <button id="del">DEL</button>
-                <button id="div">/</button>
+                <button id="reset" value="ac">AC</button>
+                <button id="sign" value="sign">+/-</button>
+                <button id="del" value="del">DEL</button>
+
+                <button class="operator" id="div" value="div">/</button>
                 <button class="number" value="7">7</button>
                 <button class="number" value="8">8</button>
                 <button class="number" value="9">9</button>
-                <button id="mul">*</button>
+
+                <button class="operator" id="mul" value="mul">*</button>
                 <button class="number" value="4">4</button>
                 <button class="number" value="5">5</button>
                 <button class="number" value="6">6</button>
-                <button id="sub">-</button>
+
+                <button class="operator" id="sub" value="sub">-</button>
                 <button class="number" value="1">1</button>
                 <button class="number" value="2">2</button>
                 <button class="number" value="3">3</button>
-                <button id="add">+</button>
+
+                <button class="operator" id="add" value="add">+</button>
                 <button class="number" value="0">0</button>
-                <button id="dec">.</button>
-                <button id="equal">=</button>
+                <button id="dec" class="number" value=".">.</button>
+
+                <button class="operator" id="equal" value="equal">=</button>
             </div>
         </div>
     </main>
