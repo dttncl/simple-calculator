@@ -85,3 +85,19 @@ button.box:active {
     padding: 20px;
     box-sizing:border-box
 }
+
+.operator {
+    background-color: #eaa007;
+}
+
+.ac {
+    background-color: #a885b5; 
+}
+
+.sign {
+    background-color: #d8cbad; 
+}
+
+.del {
+    background-color: #d73c26; 
+}
