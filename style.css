@@ -13,6 +13,13 @@ a {
     color: black;
 }
 
+#display {
+    vertical-align: bottom;
+    text-align: right;
+    margin: 0;
+    font-size: 60px;
+}
+
 
 footer img {
     height: 20px;
@@ -75,4 +82,6 @@ button.box:active {
 .screen {
     width: 360px;
     height: 115px;
+    padding: 20px;
+    box-sizing:border-box
 }
