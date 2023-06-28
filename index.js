@@ -1,6 +1,7 @@
 let keypads = document.querySelectorAll('button');
 let display = document.querySelector('#display');
 
+// add style to buttons
 keypads.forEach(element => {
     element.classList.add('box');
 });
@@ -10,15 +11,13 @@ let num2 = 0;
 let op;
 let counter = 0;
 let dotCount = 0;
-
-let OPERATOR = {
+let numBuilder = '';
+const OPERATOR = {
     add : '+',
     sub : '-',
     mul : '*',
     div : '/'
 }
-
-let numBuilder = '';
 
 // function to build number
 buildNumber();
@@ -128,3 +127,4 @@ function multiply(num1,num2) {
 function divide(num1,num2) {
     return (num2 === 0) ? 'rick roll' : num1 / num2;
 }
+
