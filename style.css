@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 410px;
+    height: 650px;
+    border: 5px solid #000000;
+    border-radius: 50px;
+    box-shadow: 5px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.box {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    font-weight: bold;
+    transition: 0.1s all;
+}
+
+button[value="0"]{
+    width: 170px;
+}
+
+button.box:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+button.box:active {
+    transform: scale(0.80);
+}
+
+.keys {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.screen {
+    width: 360px;
+    height: 115px;
+}
